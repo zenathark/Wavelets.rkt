@@ -23,9 +23,11 @@
 (struct BGR16 AbstractBinaryRGB (blue green red [size #:auto])
   #:auto-value 16)
 
-(struct RGB AbstractRGB (red green blue))
+(struct RGB AbstractRGB (red green blue)
+  #:transparent)
 (struct AbstractGray ())
-(struct Gray AbstractGray (gray))
+(struct Gray AbstractGray (gray)
+  #:transparent)
 (struct HSV (hue saturation value))
 
 ;; (define-generic (red color))
